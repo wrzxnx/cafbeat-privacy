@@ -1,0 +1,1016 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy · CafBeat</title>
+<meta name="description" content="Privacy Policy · CafBeat">
+<link rel="icon" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/style.css">
+<script>
+(function () {
+  var L = {"zh-Hans": "隐私政策 · 咖律", "zh-Hant": "隱私政策 · 咖律", "en": "Privacy Policy · CafBeat", "ja": "プライバシーポリシー · CafBeat", "ko": "개인정보 처리방침 · CafBeat", "th": "นโยบายความเป็นส่วนตัว · CafBeat"}, d = document.documentElement;
+  function pick(c) {
+    if (!c) return null;
+    c = String(c).toLowerCase().replace(/_/g, "-");
+    if (/^zh-(hant|tw|hk|mo)/.test(c)) return "zh-Hant";
+    if (/^zh/.test(c)) return "zh-Hans";
+    var p = c.split("-")[0];
+    return ["en", "ja", "ko", "th"].indexOf(p) >= 0 ? p : null;
+  }
+  var q = null;
+  try { q = new URLSearchParams(location.search).get("lang"); } catch (e) {}
+  var lang = pick(q);
+  if (!lang) {
+    var list = navigator.languages || [navigator.language];
+    for (var i = 0; i < list.length && !lang; i++) lang = pick(list[i]);
+  }
+  lang = lang || "en";
+  d.setAttribute("data-lang", lang);
+  d.lang = lang;
+  document.title = L[lang];
+})();
+</script>
+<style>
+html[data-lang] section[data-lang]{display:none}
+html[data-lang="zh-Hans"] section[data-lang="zh-Hans"]{display:block}
+html[data-lang="zh-Hant"] section[data-lang="zh-Hant"]{display:block}
+html[data-lang="en"] section[data-lang="en"]{display:block}
+html[data-lang="ja"] section[data-lang="ja"]{display:block}
+html[data-lang="ko"] section[data-lang="ko"]{display:block}
+html[data-lang="th"] section[data-lang="th"]{display:block}
+</style>
+</head>
+<body>
+<div class="wrap">
+<section data-lang="zh-Hans" lang="zh-Hans">
+<header class="top">
+  <a class="brand" href="https://wrzxnx.github.io/cafbeat/?lang=zh-Hans"><img src="assets/icon.png" alt="">咖律</a>
+  <nav class="lang" aria-label="Language">
+    <a href="?lang=zh-Hans" aria-current="page" hreflang="zh-Hans">简体</a>
+    <a href="?lang=zh-Hant" hreflang="zh-Hant">繁體</a>
+    <a href="?lang=en" hreflang="en">English</a>
+    <a href="?lang=ja" hreflang="ja">日本語</a>
+    <a href="?lang=ko" hreflang="ko">한국어</a>
+    <a href="?lang=th" hreflang="th">ไทย</a>
+  </nav>
+</header>
+<main class="receipt">
+<h1>咖律隐私政策</h1>
+<p class="meta">更新日期：2026-10-24 · 生效日期：2026-10-24</p>
+
+<p>欢迎使用“咖律”（英文名 CafBeat，以下简称“本应用”）。本应用由 wangrui（以下简称“我们”）开发和运营。我们深知个人信息对你的重要性，会按照《中华人民共和国个人信息保护法》等法律法规的要求，尽力保护你的个人信息安全。请你在使用本应用前仔细阅读本政策。</p>
+
+<div class="summary">
+  <p><strong>一句话版本：</strong>你的咖啡记录、照片和位置都只保存在你自己的设备上（开启 iCloud 同步时保存在你自己的 iCloud 里）。我们没有服务器，也没有账号系统，看不到你的任何记录。</p>
+  <p>唯一会发给我们的，是你<strong>同意后</strong>上报的咖啡品牌名，以及统计服务（中国大陆为友盟，其他国家和地区为 Google Firebase）收集的设备基础信息。你可以随时在“设置”里关闭。</p>
+</div>
+
+<nav class="toc">
+<strong>目录</strong>
+<ol>
+  <li><a href="#zh-hans-collect">我们如何收集和使用你的信息</a></li>
+  <li><a href="#zh-hans-permissions">系统权限说明</a></li>
+  <li><a href="#zh-hans-sdk">第三方 SDK 和服务</a></li>
+  <li><a href="#zh-hans-storage">信息的存储</a></li>
+  <li><a href="#zh-hans-share">信息的共享、转让和公开披露</a></li>
+  <li><a href="#zh-hans-rights">你的权利</a></li>
+  <li><a href="#zh-hans-minor">未成年人保护</a></li>
+  <li><a href="#zh-hans-security">信息安全</a></li>
+  <li><a href="#zh-hans-update">本政策的更新</a></li>
+  <li><a href="#zh-hans-contact">联系我们</a></li>
+</ol>
+</nav>
+
+<h2 id="zh-hans-collect">一、我们如何收集和使用你的信息</h2>
+
+<h3>1. 咖啡记录（仅保存在本机）</h3>
+<p>你在本应用中创建的记录，包括时间、咖啡品牌、饮品、杯型、温度、糖度、规格、渠道、取餐号、价格、热量和咖啡因估算、备注、识别出的原始文字，以及你在设置中填写的时薪/月薪、下班时间、睡觉时间、咖啡因上限等，<strong>只保存在你设备本地的数据库中</strong>，用于展示日历、统计和报告。我们无法访问这些信息。</p>
+
+<h3>2. 拍照和相册识别（本机离线处理）</h3>
+<p>当你拍摄咖啡杯贴或从相册选择订单截图时，本应用使用 Apple 系统自带的 Vision 框架<strong>在设备上离线识别文字</strong>。照片和识别结果不会上传到任何服务器。你选择保存的照片（例如“杯贴票根”）仅保存在本机。</p>
+
+<h3>3. 地点（可选）</h3>
+<p>如果你允许使用位置，本应用会在你新建记录时获取当前位置，用于记录“这杯咖啡在哪里喝的”。位置经纬度和地点名称保存在本机记录中。将经纬度转换为地点名称时，会使用 Apple 提供的系统地理编码服务（由 Apple 按其隐私政策处理）。拒绝授权不影响其他功能，你也可以手动填写地点。</p>
+
+
+<h3>4. 提醒通知（可选）</h3>
+<p>如果你开启咖啡因相关提醒，本应用会使用系统本地通知在设备上安排提醒，不经过任何服务器。</p>
+
+<h3>5. iCloud 同步（可选）</h3>
+<p>如果你开启 iCloud 同步，你的记录会通过 Apple 的 CloudKit 保存到<strong>你自己 iCloud 账户的私有数据库</strong>中，用于在你的多台设备间同步。该数据由 Apple 按其隐私政策存储和保护，我们无法访问。</p>
+
+<h3>6. 帮助改进识别（需你同意，可随时关闭）</h3>
+<p>首次启动时，本应用会询问你是否愿意上报识别到的咖啡品牌名。只有在你点击“同意”之后，本应用才会初始化统计 SDK 并开始上报；你点击“不了”或之后在设置中关闭，统计 SDK 不会初始化或会停止工作。</p>
+<p>上报内容<strong>仅限</strong>以下字段：</p>
+<ul>
+  <li><code>brand</code>：你最终保存的咖啡品牌名文字（包含 5 位及以上连续数字的内容会被直接丢弃，最长 40 个字符）；</li>
+  <li><code>ocr_matched</code>：识别是否自动匹配到内置品牌；</li>
+  <li><code>corrected</code>：你是否修改了识别出的品牌；</li>
+  <li><code>in_catalog</code>：该品牌是否已在内置品牌库中；</li>
+  <li><code>app_version</code>、<code>data_version</code>：应用版本和内置数据版本。</li>
+</ul>
+<p>上报内容不包含照片、杯贴或订单的其他文字、价格、取餐号、时间、位置等信息。仅对通过拍照或相册识别新建的记录上报，手动记录和编辑旧记录不会上报。我们用这些信息补充内置品牌库、提高识别准确率。</p>
+<p>统计服务按你的 App Store 账户所在国家或地区选择：<strong>中国大陆使用友盟，其他国家和地区使用 Google Firebase Analytics</strong>，同一时间只会启用其中一个。两者都只在你同意后初始化，并会收集设备基础信息，详见<a href="#zh-hans-sdk">第三方 SDK</a>。</p>
+
+<h3>7. 购买 Pro（应用内购买）</h3>
+<p>Pro 会员（年订阅或一次性买断）通过 Apple App Store 的应用内购买完成，支付由 Apple 处理。我们不会收集你的 Apple ID、支付卡号等支付信息。本应用仅在设备上通过 Apple StoreKit 读取交易凭证，用于确认你是否已开通 Pro。</p>
+
+<h3>8. 导出和分享</h3>
+<p>当你导出 PDF、长图或 CSV，或分享小票图片时，文件由你通过系统分享面板主动发送到你选择的应用或位置。我们不会获取这些文件。</p>
+
+<h3>9. 我们不会做的事</h3>
+<ul>
+  <li>不要求注册或登录，不收集手机号、姓名、身份证号等身份信息；</li>
+  <li>不申请“跟踪”权限（App Tracking Transparency），不获取广告标识符（IDFA）；</li>
+  <li>不展示广告，不做个性化推荐，不出售你的信息。</li>
+</ul>
+
+<h2 id="zh-hans-permissions">二、系统权限说明</h2>
+<p>以下权限都只在你使用相关功能时才会申请，你可以随时在 iPhone 的“设置 &gt; 咖律”中开启或关闭。拒绝授权只会影响对应功能。</p>
+<div class="table-scroll">
+<table>
+  <thead><tr><th>权限</th><th>用途</th><th>何时申请</th></tr></thead>
+  <tbody>
+    <tr><td>相机</td><td>拍摄咖啡杯贴并在本机识别</td><td>点击“拍杯贴”时</td></tr>
+    <tr><td>照片</td><td>从相册选择杯贴照片或订单截图识别</td><td>点击“从相册选择”时</td></tr>
+    <tr><td>位置（使用期间）</td><td>记录喝咖啡的地点</td><td>在设置中开启定位或首次记录地点时</td></tr>
+    <tr><td>通知</td><td>咖啡因相关的本地提醒</td><td>开启提醒时</td></tr>
+    <tr><td>iCloud</td><td>多设备同步记录</td><td>在设置中开启 iCloud 同步时</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2 id="zh-hans-sdk">三、第三方 SDK 和服务</h2>
+<p>本应用接入了以下第三方 SDK。我们会对其进行必要的评估，并要求其按照法律法规和本政策处理信息。</p>
+<div class="table-scroll">
+<table>
+  <thead><tr><th>SDK / 服务</th><th>提供方</th><th>用途</th><th>收集的信息</th><th>隐私政策</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>友盟 U-App 统计 SDK（UMCommon、UMDevice）<br>仅中国大陆</td>
+      <td>友盟同欣（北京）科技有限公司</td>
+      <td>统计品牌上报事件，帮助我们改进识别</td>
+      <td>设备信息（设备型号、操作系统版本、IDFV、屏幕分辨率、运营商、网络类型）、IP 地址，以及上文列出的品牌上报字段。仅在你同意后初始化。</td>
+      <td><a href="https://www.umeng.com/page/policy" rel="noopener">umeng.com/page/policy</a></td>
+    </tr>
+    <tr>
+      <td>Google Firebase Analytics（不含广告标识符）<br>中国大陆以外</td>
+      <td>Google LLC</td>
+      <td>统计品牌上报事件，帮助我们改进识别</td>
+      <td>应用实例 ID、设备型号、操作系统版本、应用版本、语言、根据 IP 地址推断的大致国家或地区（IP 地址本身不保存）、首次打开和使用时长等基础事件，以及上文列出的品牌上报字段。不收集 IDFA，不用于广告。仅在你同意后启用。</td>
+      <td><a href="https://firebase.google.com/support/privacy" rel="noopener">firebase.google.com/support/privacy</a></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p>此外，本应用使用 Apple 提供的系统服务：Vision（本机文字识别）、CloudKit/iCloud（可选同步）、Core Location 地理编码（可选地点）、StoreKit（应用内购买）。这些服务由 Apple 按照 <a href="https://www.apple.com.cn/legal/privacy/" rel="noopener">Apple 隐私政策</a> 处理。</p>
+
+<h2 id="zh-hans-storage">四、信息的存储</h2>
+<ul>
+  <li><strong>存储地点：</strong>你的咖啡记录保存在你的设备上；开启 iCloud 同步时同时保存在你的 iCloud 账户中。品牌上报信息：中国大陆用户的数据由友盟按其政策存储于中华人民共和国境内；其他国家和地区用户的数据由 Google 按其政策处理，可能存储在你所在国家或地区以外（包括美国）的服务器上，Google 采用标准合同条款等机制保障跨境传输。</li>
+  <li><strong>存储期限：</strong>本机记录会一直保留，直到你在应用内删除、使用“清空数据”或卸载本应用。iCloud 中的数据可在 iPhone“设置 &gt; Apple ID &gt; iCloud &gt; 管理账户储存空间”中删除。品牌上报数据仅保留实现目的所必需的最短时间。</li>
+</ul>
+
+<h2 id="zh-hans-share">五、信息的共享、转让和公开披露</h2>
+<p>除第三部分所述的第三方 SDK 外，我们不会与任何公司、组织或个人共享你的个人信息，不会转让，也不会公开披露，但以下情况除外：取得你的单独同意；根据法律法规、诉讼或政府主管部门的强制性要求。</p>
+
+<h2 id="zh-hans-rights">六、你的权利</h2>
+<ul>
+  <li><strong>查阅、更正和删除：</strong>你可以在应用内直接查看、编辑或删除任何一条记录，也可以在“设置”中“清空数据”删除全部记录。</li>
+  <li><strong>导出：</strong>你可以在“设置”中导出 CSV，或在报告页导出 PDF/长图。</li>
+  <li><strong>撤回同意：</strong>你可以在“设置”中随时关闭“帮助改进识别”，关闭后不再上报；也可以在系统设置中关闭相机、照片、位置、通知权限。撤回同意不影响撤回前基于同意已进行的处理。</li>
+  <li><strong>注销：</strong>本应用没有账号，卸载应用即可删除本机全部数据。</li>
+  <li>如需删除已上报的品牌数据或有其他请求，可通过<a href="#zh-hans-contact">联系我们</a>提出，我们会在 15 个工作日内答复。</li>
+</ul>
+
+<h2 id="zh-hans-minor">七、未成年人保护</h2>
+<p>本应用面向成年人。若你是未满 14 周岁的未成年人，请在父母或其他监护人的指导下阅读本政策并使用本应用。我们不会主动收集未成年人的个人信息。</p>
+
+<h2 id="zh-hans-security">八、信息安全</h2>
+<p>你的记录保存在受 iOS 系统保护的应用沙盒中；iCloud 同步数据由 Apple 加密传输和存储；统计上报通过加密连接传输。请妥善保管你的设备和 Apple ID。若发生个人信息安全事件，我们会按法律法规要求及时告知你。</p>
+
+<h2 id="zh-hans-update">九、本政策的更新</h2>
+<p>我们可能会适时更新本政策。更新后会在本页面发布并修改更新日期；如涉及重大变化（例如新增收集的信息类型或新增第三方 SDK），我们会在应用内以弹窗等显著方式通知你，并在需要时重新征得你的同意。</p>
+
+<h2 id="zh-hans-contact">十、联系我们</h2>
+<p>如果你对本政策或你的个人信息有任何疑问、意见或请求，请联系：</p>
+<ul>
+  <li>开发者：wangrui</li>
+  <li>邮箱：<a href="mailto:wrzxnx@gmail.com">wrzxnx@gmail.com</a></li>
+</ul>
+<p>我们会在收到你的请求后 15 个工作日内答复。</p>
+</main>
+<footer>
+  <p><a href="https://wrzxnx.github.io/cafbeat/?lang=zh-Hans">咖律</a> · <a href="https://wrzxnx.github.io/cafbeat-terms/?lang=zh-Hans">用户协议</a> · <a href="https://wrzxnx.github.io/cafbeat-privacy/?lang=zh-Hans">隐私政策</a> · <a href="mailto:wrzxnx@gmail.com">wrzxnx@gmail.com</a></p>
+  <p>© 2026 咖律 CafBeat</p>
+</footer>
+</section>
+<section data-lang="zh-Hant" lang="zh-Hant">
+<header class="top">
+  <a class="brand" href="https://wrzxnx.github.io/cafbeat/?lang=zh-Hant"><img src="assets/icon.png" alt="">咖律</a>
+  <nav class="lang" aria-label="Language">
+    <a href="?lang=zh-Hans" hreflang="zh-Hans">简体</a>
+    <a href="?lang=zh-Hant" aria-current="page" hreflang="zh-Hant">繁體</a>
+    <a href="?lang=en" hreflang="en">English</a>
+    <a href="?lang=ja" hreflang="ja">日本語</a>
+    <a href="?lang=ko" hreflang="ko">한국어</a>
+    <a href="?lang=th" hreflang="th">ไทย</a>
+  </nav>
+</header>
+<main class="receipt">
+<h1>咖律隱私政策</h1>
+<p class="meta">更新日期：2026-10-24 · 生效日期：2026-10-24</p>
+
+<p>歡迎使用「咖律」（英文名 CafBeat，以下簡稱「本應用」）。本應用由 wangrui（以下簡稱「我們」）開發和運營。我們深知個人資訊對你的重要性，會按照《中華人民共和國個人資訊保護法》等法律法規的要求，盡力保護你的個人資訊安全。請你在使用本應用前仔細閱讀本政策。</p>
+
+<div class="summary">
+  <p><strong>一句話版本：</strong>你的咖啡記錄、照片和位置都只儲存在你自己的裝置上（開啟 iCloud 同步時儲存在你自己的 iCloud 裡）。我們沒有伺服器，也沒有帳號系統，看不到你的任何記錄。</p>
+  <p>唯一會發給我們的，是你<strong>同意後</strong>上報的咖啡品牌名，以及統計服務（中國大陸為友盟，其他國家和地區為 Google Firebase）收集的裝置基礎資訊。你可以隨時在「設定」裡關閉。</p>
+</div>
+
+<nav class="toc">
+<strong>目錄</strong>
+<ol>
+  <li><a href="#zh-hant-collect">我們如何收集和使用你的資訊</a></li>
+  <li><a href="#zh-hant-permissions">系統權限說明</a></li>
+  <li><a href="#zh-hant-sdk">第三方 SDK 和服務</a></li>
+  <li><a href="#zh-hant-storage">資訊的儲存</a></li>
+  <li><a href="#zh-hant-share">資訊的共享、轉讓和公開披露</a></li>
+  <li><a href="#zh-hant-rights">你的權利</a></li>
+  <li><a href="#zh-hant-minor">未成年人保護</a></li>
+  <li><a href="#zh-hant-security">資訊安全</a></li>
+  <li><a href="#zh-hant-update">本政策的更新</a></li>
+  <li><a href="#zh-hant-contact">聯絡我們</a></li>
+</ol>
+</nav>
+
+<h2 id="zh-hant-collect">一、我們如何收集和使用你的資訊</h2>
+
+<h3>1. 咖啡記錄（僅儲存在本機）</h3>
+<p>你在本應用中建立的記錄，包括時間、咖啡品牌、飲品、杯型、溫度、糖度、規格、渠道、取餐號、價格、熱量和咖啡因估算、備註、識別出的原始文字，以及你在設定中填寫的時薪/月薪、下班時間、睡覺時間、咖啡因上限等，<strong>只儲存在你裝置本地的資料庫中</strong>，用於展示日曆、統計和報告。我們無法訪問這些資訊。</p>
+
+<h3>2. 拍照和相簿識別（本機離線處理）</h3>
+<p>當你拍攝咖啡杯貼或從相簿選擇訂單截圖時，本應用使用 Apple 系統自帶的 Vision 框架<strong>在裝置上離線識別文字</strong>。照片和識別結果不會上傳到任何伺服器。你選擇儲存的照片（例如「杯貼票根」）僅儲存在本機。</p>
+
+<h3>3. 地點（可選）</h3>
+<p>如果你允許使用位置，本應用會在你新建記錄時獲取當前位置，用於記錄「這杯咖啡在哪裡喝的」。位置經緯度和地點名稱儲存在本機記錄中。將經緯度轉換為地點名稱時，會使用 Apple 提供的系統地理編碼服務（由 Apple 按其隱私政策處理）。拒絕授權不影響其他功能，你也可以手動填寫地點。</p>
+
+
+<h3>4. 提醒通知（可選）</h3>
+<p>如果你開啟咖啡因相關提醒，本應用會使用系統本地通知在裝置上安排提醒，不經過任何伺服器。</p>
+
+<h3>5. iCloud 同步（可選）</h3>
+<p>如果你開啟 iCloud 同步，你的記錄會透過 Apple 的 CloudKit 儲存到<strong>你自己 iCloud 帳戶的私有資料庫</strong>中，用於在你的多臺裝置間同步。該資料由 Apple 按其隱私政策儲存和保護，我們無法訪問。</p>
+
+<h3>6. 幫助改進識別（需你同意，可隨時關閉）</h3>
+<p>首次啟動時，本應用會詢問你是否願意上報識別到的咖啡品牌名。只有在你點選「同意」之後，本應用才會初始化統計 SDK 並開始上報；你點選「不了」或之後在設定中關閉，統計 SDK 不會初始化或會停止工作。</p>
+<p>上報內容<strong>僅限</strong>以下欄位：</p>
+<ul>
+  <li><code>brand</code>：你最終儲存的咖啡品牌名文字（包含 5 位及以上連續數字的內容會被直接丟棄，最長 40 個字元）；</li>
+  <li><code>ocr_matched</code>：識別是否自動匹配到內建品牌；</li>
+  <li><code>corrected</code>：你是否修改了識別出的品牌；</li>
+  <li><code>in_catalog</code>：該品牌是否已在內建品牌庫中；</li>
+  <li><code>app_version</code>、<code>data_version</code>：應用版本和內建資料版本。</li>
+</ul>
+<p>上報內容不包含照片、杯貼或訂單的其他文字、價格、取餐號、時間、位置等資訊。僅對透過拍照或相簿識別新建的記錄上報，手動記錄和編輯舊記錄不會上報。我們用這些資訊補充內建品牌庫、提高識別準確率。</p>
+<p>統計服務依你的 App Store 帳戶所在國家或地區選擇：<strong>中國大陸使用友盟，其他國家和地區使用 Google Firebase Analytics</strong>，同一時間只會啟用其中一個。兩者都只在你同意後初始化，並會收集裝置基礎資訊，詳見<a href="#zh-hant-sdk">第三方 SDK</a>。</p>
+
+<h3>7. 購買 Pro（應用內購買）</h3>
+<p>Pro 會員（年訂閱或一次性買斷）透過 Apple App Store 的應用內購買完成，支付由 Apple 處理。我們不會收集你的 Apple ID、支付卡號等支付資訊。本應用僅在裝置上透過 Apple StoreKit 讀取交易憑證，用於確認你是否已開通 Pro。</p>
+
+<h3>8. 匯出和分享</h3>
+<p>當你匯出 PDF、長圖或 CSV，或分享小票圖片時，檔案由你透過系統分享面板主動傳送到你選擇的應用或位置。我們不會獲取這些檔案。</p>
+
+<h3>9. 我們不會做的事</h3>
+<ul>
+  <li>不要求註冊或登入，不收集手機號、姓名、身份證號等身份資訊；</li>
+  <li>不申請「跟蹤」權限（App Tracking Transparency），不獲取廣告識別符號（IDFA）；</li>
+  <li>不展示廣告，不做個性化推薦，不出售你的資訊。</li>
+</ul>
+
+<h2 id="zh-hant-permissions">二、系統權限說明</h2>
+<p>以下權限都只在你使用相關功能時才會申請，你可以隨時在 iPhone 的「設定 &gt; 咖律」中開啟或關閉。拒絕授權只會影響對應功能。</p>
+<div class="table-scroll">
+<table>
+  <thead><tr><th>權限</th><th>用途</th><th>何時申請</th></tr></thead>
+  <tbody>
+    <tr><td>相機</td><td>拍攝咖啡杯貼並在本機識別</td><td>點選「拍杯貼」時</td></tr>
+    <tr><td>照片</td><td>從相簿選擇杯貼照片或訂單截圖識別</td><td>點選「從相簿選擇」時</td></tr>
+    <tr><td>位置（使用期間）</td><td>記錄喝咖啡的地點</td><td>在設定中開啟定位或首次記錄地點時</td></tr>
+    <tr><td>通知</td><td>咖啡因相關的本地提醒</td><td>開啟提醒時</td></tr>
+    <tr><td>iCloud</td><td>多裝置同步記錄</td><td>在設定中開啟 iCloud 同步時</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2 id="zh-hant-sdk">三、第三方 SDK 和服務</h2>
+<p>本應用接入了以下第三方 SDK。我們會對其進行必要的評估，並要求其按照法律法規和本政策處理資訊。</p>
+<div class="table-scroll">
+<table>
+  <thead><tr><th>SDK / 服務</th><th>提供方</th><th>用途</th><th>收集的資訊</th><th>隱私政策</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>友盟 U-App 統計 SDK（UMCommon、UMDevice）<br>僅中國大陸</td>
+      <td>友盟同欣（北京）科技有限公司</td>
+      <td>統計品牌上報事件，幫助我們改進識別</td>
+      <td>裝置資訊（裝置型號、作業系統版本、IDFV、螢幕解析度、運營商、網路型別）、IP 地址，以及上文列出的品牌上報欄位。僅在你同意後初始化。</td>
+      <td><a href="https://www.umeng.com/page/policy" rel="noopener">umeng.com/page/policy</a></td>
+    </tr>
+    <tr>
+      <td>Google Firebase Analytics（不含廣告識別碼）<br>中國大陸以外</td>
+      <td>Google LLC</td>
+      <td>統計品牌上報事件，幫助我們改進識別</td>
+      <td>應用實例 ID、裝置型號、作業系統版本、應用版本、語言、依 IP 位址推斷的大致國家或地區（IP 位址本身不保存）、首次開啟和使用時長等基礎事件，以及上文列出的品牌上報欄位。不收集 IDFA，不用於廣告。僅在你同意後啟用。</td>
+      <td><a href="https://firebase.google.com/support/privacy" rel="noopener">firebase.google.com/support/privacy</a></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p>此外，本應用使用 Apple 提供的系統服務：Vision（本機文字識別）、CloudKit/iCloud（可選同步）、Core Location 地理編碼（可選地點）、StoreKit（應用內購買）。這些服務由 Apple 按照 <a href="https://www.apple.com.cn/legal/privacy/" rel="noopener">Apple 隱私政策</a> 處理。</p>
+
+<h2 id="zh-hant-storage">四、資訊的儲存</h2>
+<ul>
+  <li><strong>儲存地點：</strong>你的咖啡記錄儲存在你的裝置上；開啟 iCloud 同步時同時儲存在你的 iCloud 帳戶中。品牌上報資訊：中國大陸使用者的資料由友盟按其政策儲存於中華人民共和國境內；其他國家和地區使用者的資料由 Google 按其政策處理，可能儲存在你所在國家或地區以外（包括美國）的伺服器上，Google 採用標準合約條款等機制保障跨境傳輸。</li>
+  <li><strong>儲存期限：</strong>本機記錄會一直保留，直到你在應用內刪除、使用「清空資料」或解除安裝本應用。iCloud 中的資料可在 iPhone「設定 &gt; Apple ID &gt; iCloud &gt; 管理帳戶儲存空間」中刪除。品牌上報資料僅保留實現目的所必需的最短時間。</li>
+</ul>
+
+<h2 id="zh-hant-share">五、資訊的共享、轉讓和公開披露</h2>
+<p>除第三部分所述的第三方 SDK 外，我們不會與任何公司、組織或個人共享你的個人資訊，不會轉讓，也不會公開披露，但以下情況除外：取得你的單獨同意；根據法律法規、訴訟或政府主管部門的強制性要求。</p>
+
+<h2 id="zh-hant-rights">六、你的權利</h2>
+<ul>
+  <li><strong>查閱、更正和刪除：</strong>你可以在應用內直接檢視、編輯或刪除任何一條記錄，也可以在「設定」中「清空資料」刪除全部記錄。</li>
+  <li><strong>匯出：</strong>你可以在「設定」中匯出 CSV，或在報告頁匯出 PDF/長圖。</li>
+  <li><strong>撤回同意：</strong>你可以在「設定」中隨時關閉「幫助改進識別」，關閉後不再上報；也可以在系統設定中關閉相機、照片、位置、通知權限。撤回同意不影響撤回前基於同意已進行的處理。</li>
+  <li><strong>登出：</strong>本應用沒有帳號，解除安裝應用即可刪除本機全部資料。</li>
+  <li>如需刪除已上報的品牌資料或有其他請求，可透過<a href="#zh-hant-contact">聯絡我們</a>提出，我們會在 15 個工作日內答覆。</li>
+</ul>
+
+<h2 id="zh-hant-minor">七、未成年人保護</h2>
+<p>本應用面向成年人。若你是未滿 14 週歲的未成年人，請在父母或其他監護人的指導下閱讀本政策並使用本應用。我們不會主動收集未成年人的個人資訊。</p>
+
+<h2 id="zh-hant-security">八、資訊安全</h2>
+<p>你的記錄儲存在受 iOS 系統保護的應用沙盒中；iCloud 同步資料由 Apple 加密傳輸和儲存；統計上報透過加密連線傳輸。請妥善保管你的裝置和 Apple ID。若發生個人資訊安全事件，我們會按法律法規要求及時告知你。</p>
+
+<h2 id="zh-hant-update">九、本政策的更新</h2>
+<p>我們可能會適時更新本政策。更新後會在本頁面釋出並修改更新日期；如涉及重大變化（例如新增收集的資訊型別或新增第三方 SDK），我們會在應用內以彈窗等顯著方式通知你，並在需要時重新徵得你的同意。</p>
+
+<h2 id="zh-hant-contact">十、聯絡我們</h2>
+<p>如果你對本政策或你的個人資訊有任何疑問、意見或請求，請聯絡：</p>
+<ul>
+  <li>開發者：wangrui</li>
+  <li>電子郵件：<a href="mailto:wrzxnx@gmail.com">wrzxnx@gmail.com</a></li>
+</ul>
+<p>我們會在收到你的請求後 15 個工作日內答覆。</p>
+</main>
+<footer>
+  <p><a href="https://wrzxnx.github.io/cafbeat/?lang=zh-Hant">咖律</a> · <a href="https://wrzxnx.github.io/cafbeat-terms/?lang=zh-Hant">使用者協議</a> · <a href="https://wrzxnx.github.io/cafbeat-privacy/?lang=zh-Hant">隱私政策</a> · <a href="mailto:wrzxnx@gmail.com">wrzxnx@gmail.com</a></p>
+  <p>© 2026 咖律 CafBeat</p>
+</footer>
+</section>
+<section data-lang="en" lang="en">
+<header class="top">
+  <a class="brand" href="https://wrzxnx.github.io/cafbeat/?lang=en"><img src="assets/icon.png" alt="">CafBeat</a>
+  <nav class="lang" aria-label="Language">
+    <a href="?lang=zh-Hans" hreflang="zh-Hans">简体</a>
+    <a href="?lang=zh-Hant" hreflang="zh-Hant">繁體</a>
+    <a href="?lang=en" aria-current="page" hreflang="en">English</a>
+    <a href="?lang=ja" hreflang="ja">日本語</a>
+    <a href="?lang=ko" hreflang="ko">한국어</a>
+    <a href="?lang=th" hreflang="th">ไทย</a>
+  </nav>
+</header>
+<main class="receipt">
+<h1>CafBeat Privacy Policy</h1>
+<p class="meta">Last updated: 2026-10-24 · Effective: 2026-10-24</p>
+
+<p>CafBeat (咖律, the “App”) is developed and operated by wangrui (“we”, “us”). This policy explains what information the App handles, why, and the choices you have. If the language versions differ, the English version prevails for users outside mainland China and the Simplified Chinese version prevails for users in mainland China.</p>
+
+<div class="summary">
+  <p><strong>The short version:</strong> your coffee log, photos and locations stay on your own device (and in your own iCloud if you turn on sync). We have no servers and no accounts, and we can’t see any of your records.</p>
+  <p>The only thing sent to us is the coffee brand name you report <strong>after you agree</strong>, plus basic device information collected by our analytics provider (Google Firebase outside mainland China, Umeng in mainland China). You can turn this off in Settings at any time.</p>
+</div>
+
+<nav class="toc">
+<strong>Contents</strong>
+<ol>
+  <li><a href="#en-collect">Information we handle and why</a></li>
+  <li><a href="#en-permissions">System permissions</a></li>
+  <li><a href="#en-sdk">Third-party SDKs and services</a></li>
+  <li><a href="#en-storage">Storage and retention</a></li>
+  <li><a href="#en-share">Sharing and disclosure</a></li>
+  <li><a href="#en-rights">Your rights</a></li>
+  <li><a href="#en-minor">Children</a></li>
+  <li><a href="#en-security">Security</a></li>
+  <li><a href="#en-update">Changes to this policy</a></li>
+  <li><a href="#en-contact">Contact us</a></li>
+</ol>
+</nav>
+
+<h2 id="en-collect">1. Information we handle and why</h2>
+
+<h3>Coffee records (on your device only)</h3>
+<p>Records you create, including time, brand, drink, size, temperature, sweetness, options, ordering channel, pickup number, price, calorie and caffeine estimates, notes and recognized raw text, as well as settings such as hourly wage or salary, work-end time, bedtime and caffeine limit, are <strong>stored only in a local database on your device</strong> and used to show your calendar, statistics and reports. We cannot access them.</p>
+
+<h3>Camera and photo recognition (processed on device)</h3>
+<p>When you photograph a cup label or choose an order screenshot, the App uses Apple’s Vision framework to <strong>recognize text on your device, offline</strong>. Photos and recognition results are never uploaded. Photos you choose to keep (for example “cup label stubs”) are stored only on your device.</p>
+
+<h3>Location (optional)</h3>
+<p>If you allow location access, the App reads your current location when you create a record so it can note where you had the coffee. Coordinates and the place name are stored in the local record. Converting coordinates into a place name uses Apple’s system geocoding service, which Apple handles under its own privacy policy. Declining does not affect other features, and you can type a place by hand.</p>
+
+
+<h3>Reminders (optional)</h3>
+<p>If you turn on caffeine reminders, the App schedules local notifications on your device. No server is involved.</p>
+
+<h3>iCloud sync (optional)</h3>
+<p>If you turn on iCloud sync, your records are stored in the <strong>private database of your own iCloud account</strong> via Apple CloudKit so they sync across your devices. Apple stores and protects this data under its privacy policy; we cannot access it.</p>
+
+<h3>Help improve recognition (only with your consent)</h3>
+<p>On first launch, the App asks whether you are willing to report recognized coffee brand names. The analytics SDK is initialized and reporting starts <strong>only after you tap “Agree”</strong>. If you tap “No thanks”, or later turn it off in Settings, the SDK is not initialized or stops working.</p>
+<p>Each report contains <strong>only</strong> these fields:</p>
+<ul>
+  <li><code>brand</code>: the brand name text you saved (anything containing 5 or more consecutive digits is discarded; max 40 characters);</li>
+  <li><code>ocr_matched</code>: whether recognition matched a built-in brand;</li>
+  <li><code>corrected</code>: whether you changed the recognized brand;</li>
+  <li><code>in_catalog</code>: whether the brand is already in the built-in catalog;</li>
+  <li><code>app_version</code>, <code>data_version</code>: app and built-in data versions.</li>
+</ul>
+<p>Reports never include photos, other label or order text, prices, pickup numbers, times or locations. Only new records created from camera or photo recognition are reported; manual entries and edits are not. We use this to expand the brand catalog and improve recognition accuracy.</p>
+<p>The analytics provider depends on the country or region of your App Store account: <strong>Google Firebase Analytics outside mainland China, and Umeng in mainland China</strong>. Only one is ever active. Both are initialized only after you consent and collect basic device information; see <a href="#en-sdk">Third-party SDKs</a>.</p>
+
+<h3>Pro purchases</h3>
+<p>CafBeat Pro (yearly subscription or one-time lifetime purchase) is sold through Apple’s App Store in-app purchase, and payment is handled by Apple. We never receive your Apple ID or payment card details. The App only reads transaction information on your device through Apple StoreKit to check whether Pro is active.</p>
+
+<h3>Export and sharing</h3>
+<p>When you export a PDF, long image or CSV, or share a receipt image, you send the file yourself via the system share sheet to an app or location you choose. We don’t receive these files.</p>
+
+<h3>What we don’t do</h3>
+<ul>
+  <li>No sign-up or login; we don’t collect your name, phone number or ID;</li>
+  <li>We don’t request App Tracking Transparency permission and don’t access the advertising identifier (IDFA);</li>
+  <li>No ads, no personalized recommendations, and we never sell your information.</li>
+</ul>
+
+<h2 id="en-permissions">2. System permissions</h2>
+<p>Each permission is requested only when you use the related feature. You can change them at any time in iPhone Settings &gt; CafBeat. Declining only affects that feature.</p>
+<div class="table-scroll">
+<table>
+  <thead><tr><th>Permission</th><th>Purpose</th><th>When it’s requested</th></tr></thead>
+  <tbody>
+    <tr><td>Camera</td><td>Photograph cup labels for on-device recognition</td><td>When you tap “Scan cup label”</td></tr>
+    <tr><td>Photos</td><td>Pick a label photo or order screenshot to recognize</td><td>When you tap “Choose from Photos”</td></tr>
+    <tr><td>Location (while using)</td><td>Note where you had your coffee</td><td>When you turn on location or first add a place</td></tr>
+    <tr><td>Notifications</td><td>Local caffeine reminders</td><td>When you turn on reminders</td></tr>
+    <tr><td>iCloud</td><td>Sync records across your devices</td><td>When you turn on iCloud sync</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2 id="en-sdk">3. Third-party SDKs and services</h2>
+<div class="table-scroll">
+<table>
+  <thead><tr><th>SDK / service</th><th>Provider</th><th>Purpose</th><th>Information collected</th><th>Privacy policy</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Umeng U-App Analytics SDK (UMCommon, UMDevice)<br>Mainland China only</td>
+      <td>Umeng Tongxin (Beijing) Technology Co., Ltd.</td>
+      <td>Count brand report events to improve recognition</td>
+      <td>Device information (model, OS version, IDFV, screen resolution, carrier, network type), IP address, and the brand report fields above. Initialized only after you consent.</td>
+      <td><a href="https://www.umeng.com/page/policy" rel="noopener">umeng.com/page/policy</a></td>
+    </tr>
+    <tr>
+      <td>Google Firebase Analytics (without ad identifier)<br>Outside mainland China</td>
+      <td>Google LLC</td>
+      <td>Count brand report events to improve recognition</td>
+      <td>App instance ID, device model, OS version, app version, language, approximate country or region inferred from IP address (the IP address itself is not stored), basic events such as first open and engagement time, and the brand report fields above. No IDFA, not used for advertising. Enabled only after you consent.</td>
+      <td><a href="https://firebase.google.com/support/privacy" rel="noopener">firebase.google.com/support/privacy</a></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p>The App also uses Apple system services: Vision (on-device text recognition), CloudKit/iCloud (optional sync), Core Location geocoding (optional place) and StoreKit (in-app purchase). Apple handles these under the <a href="https://www.apple.com/legal/privacy/" rel="noopener">Apple Privacy Policy</a>.</p>
+
+<h2 id="en-storage">4. Storage and retention</h2>
+<ul>
+  <li><strong>Where:</strong> your records are stored on your device, and in your iCloud account if sync is on. Brand reports from users outside mainland China are processed by Google under its policy and may be stored on servers outside your country or region, including in the United States; Google relies on mechanisms such as Standard Contractual Clauses for international transfers. Brand reports from users in mainland China are stored by Umeng within the People’s Republic of China.</li>
+  <li><strong>How long:</strong> local records are kept until you delete them, use “Erase all data”, or delete the App. iCloud data can be removed in iPhone Settings &gt; [your name] &gt; iCloud &gt; Manage Account Storage. Brand reports are kept only as long as needed for their purpose.</li>
+</ul>
+
+<h2 id="en-share">5. Sharing and disclosure</h2>
+<p>Apart from the third-party SDK described in section 3, we do not share, transfer or publicly disclose your personal information, except with your separate consent or where required by law, legal process or a competent government authority.</p>
+
+<h2 id="en-rights">6. Your rights</h2>
+<ul>
+  <li><strong>Access, correct and delete:</strong> view, edit or delete any record in the App, or erase everything from Settings.</li>
+  <li><strong>Export:</strong> export CSV from Settings, or PDF / long images from Reports.</li>
+  <li><strong>Withdraw consent:</strong> turn off “Help improve recognition” in Settings at any time to stop reporting, and turn off camera, photos, location or notification access in system Settings. Withdrawal does not affect processing carried out before it.</li>
+  <li><strong>Account deletion:</strong> there is no account; deleting the App removes all local data.</li>
+  <li>To request deletion of reported brand data or make any other request, <a href="#en-contact">contact us</a>. We will reply within 15 business days.</li>
+</ul>
+
+<h2 id="en-minor">7. Children</h2>
+<p>The App is intended for adults. If you are under 14, please read this policy and use the App with a parent or guardian. We do not knowingly collect information from children.</p>
+
+<h2 id="en-security">8. Security</h2>
+<p>Your records live in the App’s sandbox protected by iOS. iCloud data is encrypted in transit and at rest by Apple, and analytics reports are sent over encrypted connections. Please keep your device and Apple ID secure. If a security incident involving personal information occurs, we will notify you as required by law.</p>
+
+<h2 id="en-update">9. Changes to this policy</h2>
+<p>We may update this policy from time to time and will post updates on this page with a new date. For material changes (for example a new type of information or a new third-party SDK), we will notify you prominently in the App and ask for your consent again where required.</p>
+
+<h2 id="en-contact">10. Contact us</h2>
+<ul>
+  <li>Developer: wangrui</li>
+  <li>Email: <a href="mailto:wrzxnx@gmail.com">wrzxnx@gmail.com</a></li>
+</ul>
+<p>We will reply within 15 business days.</p>
+</main>
+<footer>
+  <p><a href="https://wrzxnx.github.io/cafbeat/?lang=en">CafBeat</a> · <a href="https://wrzxnx.github.io/cafbeat-terms/?lang=en">Terms of Use</a> · <a href="https://wrzxnx.github.io/cafbeat-privacy/?lang=en">Privacy Policy</a> · <a href="mailto:wrzxnx@gmail.com">wrzxnx@gmail.com</a></p>
+  <p>© 2026 咖律 CafBeat</p>
+</footer>
+</section>
+<section data-lang="ja" lang="ja">
+<header class="top">
+  <a class="brand" href="https://wrzxnx.github.io/cafbeat/?lang=ja"><img src="assets/icon.png" alt="">CafBeat</a>
+  <nav class="lang" aria-label="Language">
+    <a href="?lang=zh-Hans" hreflang="zh-Hans">简体</a>
+    <a href="?lang=zh-Hant" hreflang="zh-Hant">繁體</a>
+    <a href="?lang=en" hreflang="en">English</a>
+    <a href="?lang=ja" aria-current="page" hreflang="ja">日本語</a>
+    <a href="?lang=ko" hreflang="ko">한국어</a>
+    <a href="?lang=th" hreflang="th">ไทย</a>
+  </nav>
+</header>
+<main class="receipt">
+<h1>CafBeat プライバシーポリシー</h1>
+<p class="meta">最終更新日：2026-10-24 · 施行日：2026-10-24</p>
+
+<p>CafBeat（咖律、以下「本アプリ」）は、wangrui（以下「当方」）が開発・運営しています。本ポリシーでは、本アプリが取り扱う情報、その目的、およびお客様が選択できる事項について説明します。各言語版の内容に相違がある場合、中国本土以外のお客様には英語版が、中国本土のお客様には簡体字中国語版が優先されます。</p>
+
+<div class="summary">
+  <p><strong>要約：</strong>コーヒーの記録、写真、位置情報はすべてお客様のデバイス内（同期をオンにした場合はお客様自身の iCloud 内）にのみ保存されます。当方はサーバーもアカウント機能も持たず、お客様の記録を見ることはできません。</p>
+  <p>当方に送信されるのは、お客様が<strong>同意した場合に限り</strong>送信されるコーヒーのブランド名と、分析サービス（中国本土以外では Google Firebase、中国本土では Umeng）が収集する基本的なデバイス情報だけです。これは「設定」でいつでもオフにできます。</p>
+</div>
+
+<nav class="toc">
+<strong>目次</strong>
+<ol>
+  <li><a href="#ja-collect">取り扱う情報とその目的</a></li>
+  <li><a href="#ja-permissions">システムの権限</a></li>
+  <li><a href="#ja-sdk">サードパーティ SDK とサービス</a></li>
+  <li><a href="#ja-storage">保存場所と保存期間</a></li>
+  <li><a href="#ja-share">共有と開示</a></li>
+  <li><a href="#ja-rights">お客様の権利</a></li>
+  <li><a href="#ja-minor">未成年の方へ</a></li>
+  <li><a href="#ja-security">セキュリティ</a></li>
+  <li><a href="#ja-update">本ポリシーの変更</a></li>
+  <li><a href="#ja-contact">お問い合わせ</a></li>
+</ol>
+</nav>
+
+<h2 id="ja-collect">1. 取り扱う情報とその目的</h2>
+
+<h3>コーヒーの記録（デバイス内のみ）</h3>
+<p>お客様が作成した記録（日時、ブランド、ドリンク、サイズ、温度、甘さ、オプション、注文チャネル、受取番号、価格、カロリーとカフェインの推定値、メモ、認識された元のテキスト）と、時給・月給、退勤時刻、就寝時刻、カフェイン上限などの設定は、<strong>お客様のデバイス内のローカルデータベースにのみ保存</strong>され、カレンダー、統計、レポートの表示に使われます。当方はこれらにアクセスできません。</p>
+
+<h3>カメラと写真の認識（デバイス上で処理）</h3>
+<p>カップラベルを撮影したり注文のスクリーンショットを選んだりすると、本アプリは Apple の Vision フレームワークを使い、<strong>デバイス上でオフラインのまま文字を認識</strong>します。写真や認識結果がアップロードされることはありません。保存を選んだ写真（「カップラベル半券」など）はデバイス内にのみ保存されます。</p>
+
+<h3>位置情報（任意）</h3>
+<p>位置情報へのアクセスを許可すると、記録を作成する際に現在地を取得し、コーヒーを飲んだ場所を記録します。緯度経度と地名はローカルの記録に保存されます。緯度経度から地名への変換には Apple のシステムのジオコーディングサービスを使用し、Apple が自社のプライバシーポリシーに従って取り扱います。許可しなくても他の機能には影響せず、場所は手入力もできます。</p>
+
+<h3>リマインダー（任意）</h3>
+<p>カフェインのリマインダーをオンにすると、本アプリはデバイス上でローカル通知を設定します。サーバーは一切関与しません。</p>
+
+<h3>iCloud 同期（任意）</h3>
+<p>iCloud 同期をオンにすると、記録は Apple CloudKit を通じて<strong>お客様自身の iCloud アカウントのプライベートデータベース</strong>に保存され、複数のデバイス間で同期されます。このデータは Apple が同社のプライバシーポリシーに従って保存・保護し、当方はアクセスできません。</p>
+
+<h3>認識精度の改善への協力（同意した場合のみ）</h3>
+<p>初回起動時に、認識したコーヒーのブランド名を送信してよいかをおたずねします。分析 SDK の初期化と送信は、<strong>「同意する」をタップした後にのみ</strong>行われます。「しない」を選んだ場合や、後で「設定」からオフにした場合、SDK は初期化されないか、動作を停止します。</p>
+<p>送信される内容は次の項目<strong>のみ</strong>です。</p>
+<ul>
+  <li><code>brand</code>：お客様が保存したブランド名のテキスト（5 桁以上の連続した数字を含むものは破棄、最大 40 文字）</li>
+  <li><code>ocr_matched</code>：認識結果が内蔵ブランドに一致したかどうか</li>
+  <li><code>corrected</code>：認識されたブランドをお客様が修正したかどうか</li>
+  <li><code>in_catalog</code>：そのブランドがすでに内蔵カタログにあるかどうか</li>
+  <li><code>app_version</code>、<code>data_version</code>：アプリと内蔵データのバージョン</li>
+</ul>
+<p>写真、ラベルや注文のその他のテキスト、価格、受取番号、日時、位置情報は一切含まれません。送信対象はカメラまたは写真の認識から新しく作成した記録のみで、手入力や既存記録の編集は対象外です。この情報はブランドカタログの拡充と認識精度の向上に使います。</p>
+<p>分析サービスは、お客様の App Store アカウントの国または地域によって決まります。<strong>中国本土以外では Google Firebase Analytics、中国本土では Umeng</strong> を使用し、同時に有効になるのは一方のみです。どちらも同意後にのみ初期化され、基本的なデバイス情報を収集します。詳しくは<a href="#ja-sdk">サードパーティ SDK</a> をご覧ください。</p>
+
+<h3>Pro の購入</h3>
+<p>CafBeat Pro（年間サブスクリプションまたは買い切り）は Apple App Store のアプリ内課金で販売され、支払いは Apple が処理します。当方がお客様の Apple ID や支払いカード情報を受け取ることはありません。本アプリは Pro が有効かどうかを確認するため、Apple StoreKit を通じてデバイス上で取引情報を読み取るだけです。</p>
+
+<h3>書き出しと共有</h3>
+<p>PDF、長い画像、CSV を書き出したり、レシート画像を共有したりする場合、ファイルはお客様ご自身がシステムの共有シートから選んだアプリや場所に送ります。当方がこれらのファイルを受け取ることはありません。</p>
+
+<h3>当方が行わないこと</h3>
+<ul>
+  <li>登録やログインは不要で、氏名、電話番号、身分証などは収集しません。</li>
+  <li>App Tracking Transparency の許可を求めず、広告識別子（IDFA）にもアクセスしません。</li>
+  <li>広告やパーソナライズされたおすすめは表示せず、お客様の情報を販売することもありません。</li>
+</ul>
+
+<h2 id="ja-permissions">2. システムの権限</h2>
+<p>各権限は関連する機能を使うときにのみ求められます。iPhone の「設定」&gt;「CafBeat」でいつでも変更できます。許可しない場合も、その機能が使えなくなるだけです。</p>
+<div class="table-scroll">
+<table>
+  <thead><tr><th>権限</th><th>用途</th><th>求められるタイミング</th></tr></thead>
+  <tbody>
+    <tr><td>カメラ</td><td>カップラベルを撮影してデバイス上で認識</td><td>「カップラベルを撮影」をタップしたとき</td></tr>
+    <tr><td>写真</td><td>認識するラベル写真や注文スクリーンショットを選択</td><td>「写真から選択」をタップしたとき</td></tr>
+    <tr><td>位置情報（使用中のみ）</td><td>コーヒーを飲んだ場所を記録</td><td>位置情報をオンにしたとき、または初めて場所を追加したとき</td></tr>
+    <tr><td>通知</td><td>カフェインに関するローカルのリマインダー</td><td>リマインダーをオンにしたとき</td></tr>
+    <tr><td>iCloud</td><td>デバイス間で記録を同期</td><td>iCloud 同期をオンにしたとき</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2 id="ja-sdk">3. サードパーティ SDK とサービス</h2>
+<div class="table-scroll">
+<table>
+  <thead><tr><th>SDK / サービス</th><th>提供元</th><th>用途</th><th>収集される情報</th><th>プライバシーポリシー</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Umeng U-App 分析 SDK（UMCommon、UMDevice）<br>中国本土のみ</td>
+      <td>友盟同欣（北京）科技有限公司</td>
+      <td>ブランド送信イベントを集計し、認識精度を改善</td>
+      <td>デバイス情報（機種、OS バージョン、IDFV、画面解像度、通信事業者、ネットワークの種類）、IP アドレス、および上記のブランド送信項目。同意後にのみ初期化されます。</td>
+      <td><a href="https://www.umeng.com/page/policy" rel="noopener">umeng.com/page/policy</a></td>
+    </tr>
+    <tr>
+      <td>Google Firebase Analytics（広告識別子なし）<br>中国本土以外</td>
+      <td>Google LLC</td>
+      <td>ブランド送信イベントを集計し、認識精度を改善</td>
+      <td>アプリインスタンス ID、機種、OS バージョン、アプリのバージョン、言語、IP アドレスから推定したおおよその国または地域（IP アドレス自体は保存されません）、初回起動や利用時間などの基本イベント、および上記のブランド送信項目。IDFA は収集せず、広告には使用しません。同意後にのみ有効になります。</td>
+      <td><a href="https://firebase.google.com/support/privacy" rel="noopener">firebase.google.com/support/privacy</a></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p>本アプリはこのほか、Apple のシステムサービス（Vision：デバイス上の文字認識、CloudKit/iCloud：任意の同期、Core Location のジオコーディング：任意の場所、StoreKit：アプリ内課金）を使用します。これらは <a href="https://www.apple.com/jp/legal/privacy/" rel="noopener">Apple のプライバシーポリシー</a>に従って Apple が取り扱います。</p>
+
+<h2 id="ja-storage">4. 保存場所と保存期間</h2>
+<ul>
+  <li><strong>保存場所：</strong>記録はお客様のデバイス内に、同期がオンの場合はお客様の iCloud アカウントにも保存されます。中国本土以外のお客様のブランド送信データは Google が同社のポリシーに従って取り扱い、米国を含むお客様の国・地域外のサーバーに保存される場合があります。Google は国際的なデータ移転に標準契約条項などの仕組みを用いています。中国本土のお客様のデータは Umeng が中華人民共和国内に保存します。</li>
+  <li><strong>保存期間：</strong>ローカルの記録は、お客様が削除するか、「すべてのデータを消去」を使うか、本アプリを削除するまで保持されます。iCloud のデータは iPhone の「設定」&gt;［ユーザ名］&gt;「iCloud」&gt;「アカウントのストレージを管理」から削除できます。ブランド送信データは目的に必要な期間のみ保持します。</li>
+</ul>
+
+<h2 id="ja-share">5. 共有と開示</h2>
+<p>第 3 項に記載のサードパーティ SDK を除き、当方はお客様の個人情報を共有、譲渡、公開しません。ただし、お客様の個別の同意がある場合、または法令、法的手続き、管轄当局の要請がある場合を除きます。</p>
+
+<h2 id="ja-rights">6. お客様の権利</h2>
+<ul>
+  <li><strong>閲覧・訂正・削除：</strong>アプリ内でどの記録も閲覧、編集、削除でき、「設定」からすべてを消去することもできます。</li>
+  <li><strong>書き出し：</strong>「設定」から CSV を、レポート画面から PDF や長い画像を書き出せます。</li>
+  <li><strong>同意の撤回：</strong>「設定」で「認識精度の改善に協力」をいつでもオフにして送信を停止できます。また、システムの「設定」でカメラ、写真、位置情報、通知へのアクセスをオフにできます。撤回前に行われた処理には影響しません。</li>
+  <li><strong>アカウントの削除：</strong>アカウントはありません。本アプリを削除するとローカルのデータはすべて削除されます。</li>
+  <li>送信済みのブランドデータの削除などのご依頼は、<a href="#ja-contact">お問い合わせ</a>先までご連絡ください。15 営業日以内に回答します。</li>
+</ul>
+
+<h2 id="ja-minor">7. 未成年の方へ</h2>
+<p>本アプリは成人向けです。14 歳未満の方は、保護者の方と一緒に本ポリシーをお読みのうえご利用ください。当方が子どもの情報を意図的に収集することはありません。</p>
+
+<h2 id="ja-security">8. セキュリティ</h2>
+<p>記録は iOS によって保護されたアプリのサンドボックス内に保存されます。iCloud のデータは Apple により通信時・保存時ともに暗号化され、分析データは暗号化された接続で送信されます。デバイスと Apple ID は安全に管理してください。個人情報に関わるセキュリティ事故が発生した場合は、法令に従ってお知らせします。</p>
+
+<h2 id="ja-update">9. 本ポリシーの変更</h2>
+<p>本ポリシーは随時更新されることがあり、更新時は本ページに新しい日付とともに掲載します。重要な変更（新しい種類の情報や新しいサードパーティ SDK の追加など）がある場合は、アプリ内でわかりやすくお知らせし、必要に応じて改めて同意をお願いします。</p>
+
+<h2 id="ja-contact">10. お問い合わせ</h2>
+<ul>
+  <li>開発者：wangrui</li>
+  <li>メール：<a href="mailto:wrzxnx@gmail.com">wrzxnx@gmail.com</a></li>
+</ul>
+<p>15 営業日以内に回答します。</p>
+</main>
+<footer>
+  <p><a href="https://wrzxnx.github.io/cafbeat/?lang=ja">CafBeat</a> · <a href="https://wrzxnx.github.io/cafbeat-terms/?lang=ja">利用規約</a> · <a href="https://wrzxnx.github.io/cafbeat-privacy/?lang=ja">プライバシーポリシー</a> · <a href="mailto:wrzxnx@gmail.com">wrzxnx@gmail.com</a></p>
+  <p>© 2026 咖律 CafBeat</p>
+</footer>
+</section>
+<section data-lang="ko" lang="ko">
+<header class="top">
+  <a class="brand" href="https://wrzxnx.github.io/cafbeat/?lang=ko"><img src="assets/icon.png" alt="">CafBeat</a>
+  <nav class="lang" aria-label="Language">
+    <a href="?lang=zh-Hans" hreflang="zh-Hans">简体</a>
+    <a href="?lang=zh-Hant" hreflang="zh-Hant">繁體</a>
+    <a href="?lang=en" hreflang="en">English</a>
+    <a href="?lang=ja" hreflang="ja">日本語</a>
+    <a href="?lang=ko" aria-current="page" hreflang="ko">한국어</a>
+    <a href="?lang=th" hreflang="th">ไทย</a>
+  </nav>
+</header>
+<main class="receipt">
+<h1>CafBeat 개인정보 처리방침</h1>
+<p class="meta">최종 업데이트: 2026-10-24 · 시행일: 2026-10-24</p>
+
+<p>CafBeat(咖律, 이하 '앱')는 wangrui(이하 '당사')가 개발하고 운영합니다. 본 방침은 앱이 처리하는 정보와 그 목적, 그리고 사용자가 선택할 수 있는 사항을 설명합니다. 언어별 버전 간에 차이가 있는 경우, 중국 본토 이외의 사용자에게는 영어 버전이, 중국 본토 사용자에게는 중국어 간체 버전이 우선합니다.</p>
+
+<div class="summary">
+  <p><strong>요약:</strong> 커피 기록, 사진, 위치는 모두 사용자의 기기(동기화를 켠 경우 사용자 본인의 iCloud)에만 저장됩니다. 당사는 서버와 계정 시스템이 없으며 사용자의 기록을 볼 수 없습니다.</p>
+  <p>당사로 전송되는 것은 사용자가 <strong>동의한 경우에만</strong> 보내는 커피 브랜드 이름과, 분석 서비스(중국 본토 이외는 Google Firebase, 중국 본토는 Umeng)가 수집하는 기본 기기 정보뿐입니다. 이 기능은 '설정'에서 언제든지 끌 수 있습니다.</p>
+</div>
+
+<nav class="toc">
+<strong>목차</strong>
+<ol>
+  <li><a href="#ko-collect">처리하는 정보와 목적</a></li>
+  <li><a href="#ko-permissions">시스템 권한</a></li>
+  <li><a href="#ko-sdk">제3자 SDK 및 서비스</a></li>
+  <li><a href="#ko-storage">보관 장소 및 기간</a></li>
+  <li><a href="#ko-share">공유 및 공개</a></li>
+  <li><a href="#ko-rights">사용자의 권리</a></li>
+  <li><a href="#ko-minor">아동</a></li>
+  <li><a href="#ko-security">보안</a></li>
+  <li><a href="#ko-update">방침의 변경</a></li>
+  <li><a href="#ko-contact">문의</a></li>
+</ol>
+</nav>
+
+<h2 id="ko-collect">1. 처리하는 정보와 목적</h2>
+
+<h3>커피 기록(기기에만 저장)</h3>
+<p>사용자가 만든 기록(시간, 브랜드, 음료, 사이즈, 온도, 당도, 옵션, 주문 채널, 픽업 번호, 가격, 칼로리 및 카페인 추정치, 메모, 인식된 원본 텍스트)과 시급·월급, 퇴근 시간, 취침 시간, 카페인 한도 등의 설정은 <strong>사용자 기기의 로컬 데이터베이스에만 저장</strong>되며, 캘린더, 통계, 리포트를 보여 주는 데 사용됩니다. 당사는 이 정보에 접근할 수 없습니다.</p>
+
+<h3>카메라 및 사진 인식(기기에서 처리)</h3>
+<p>컵 라벨을 촬영하거나 주문 스크린샷을 선택하면, 앱은 Apple의 Vision 프레임워크를 사용해 <strong>기기에서 오프라인으로 텍스트를 인식</strong>합니다. 사진과 인식 결과는 업로드되지 않습니다. 보관하기로 선택한 사진(예: '컵 라벨 티켓')은 기기에만 저장됩니다.</p>
+
+<h3>위치(선택)</h3>
+<p>위치 접근을 허용하면 기록을 만들 때 현재 위치를 읽어 커피를 마신 장소를 기록합니다. 좌표와 장소 이름은 로컬 기록에 저장됩니다. 좌표를 장소 이름으로 변환할 때는 Apple의 시스템 지오코딩 서비스를 사용하며, Apple이 자체 개인정보 처리방침에 따라 처리합니다. 허용하지 않아도 다른 기능에는 영향이 없으며 장소를 직접 입력할 수 있습니다.</p>
+
+<h3>알림(선택)</h3>
+<p>카페인 알림을 켜면 앱이 기기에서 로컬 알림을 예약합니다. 서버는 관여하지 않습니다.</p>
+
+<h3>iCloud 동기화(선택)</h3>
+<p>iCloud 동기화를 켜면 기록이 Apple CloudKit을 통해 <strong>사용자 본인 iCloud 계정의 비공개 데이터베이스</strong>에 저장되어 여러 기기 간에 동기화됩니다. 이 데이터는 Apple이 자사 개인정보 처리방침에 따라 저장하고 보호하며, 당사는 접근할 수 없습니다.</p>
+
+<h3>인식 개선 돕기(동의한 경우에만)</h3>
+<p>처음 실행할 때 인식된 커피 브랜드 이름을 전송해도 되는지 묻습니다. 분석 SDK의 초기화와 전송은 <strong>'동의'를 누른 후에만</strong> 이루어집니다. '아니요'를 누르거나 나중에 '설정'에서 끄면 SDK는 초기화되지 않거나 작동을 멈춥니다.</p>
+<p>전송 내용은 다음 항목<strong>뿐</strong>입니다.</p>
+<ul>
+  <li><code>brand</code>: 사용자가 저장한 브랜드 이름 텍스트(5자리 이상 연속된 숫자가 포함되면 폐기, 최대 40자)</li>
+  <li><code>ocr_matched</code>: 인식 결과가 내장 브랜드와 일치했는지 여부</li>
+  <li><code>corrected</code>: 인식된 브랜드를 사용자가 수정했는지 여부</li>
+  <li><code>in_catalog</code>: 해당 브랜드가 이미 내장 카탈로그에 있는지 여부</li>
+  <li><code>app_version</code>, <code>data_version</code>: 앱 및 내장 데이터 버전</li>
+</ul>
+<p>사진, 라벨이나 주문의 기타 텍스트, 가격, 픽업 번호, 시간, 위치는 절대 포함되지 않습니다. 카메라 또는 사진 인식으로 새로 만든 기록만 전송되며, 직접 입력하거나 기존 기록을 편집한 경우는 전송되지 않습니다. 당사는 이 정보를 브랜드 카탈로그 확장과 인식 정확도 향상에 사용합니다.</p>
+<p>분석 서비스는 사용자의 App Store 계정 국가 또는 지역에 따라 결정됩니다. <strong>중국 본토 이외에서는 Google Firebase Analytics, 중국 본토에서는 Umeng</strong>을 사용하며, 동시에 하나만 활성화됩니다. 두 서비스 모두 동의 후에만 초기화되며 기본 기기 정보를 수집합니다. 자세한 내용은 <a href="#ko-sdk">제3자 SDK</a>를 참고하세요.</p>
+
+<h3>Pro 구매</h3>
+<p>CafBeat Pro(연간 구독 또는 평생 이용권)는 Apple App Store 앱 내 구입으로 판매되며 결제는 Apple이 처리합니다. 당사는 사용자의 Apple ID나 결제 카드 정보를 받지 않습니다. 앱은 Pro 활성화 여부를 확인하기 위해 Apple StoreKit을 통해 기기에서 거래 정보만 읽습니다.</p>
+
+<h3>내보내기 및 공유</h3>
+<p>PDF, 긴 이미지, CSV를 내보내거나 영수증 이미지를 공유할 때, 파일은 사용자가 시스템 공유 시트를 통해 직접 선택한 앱이나 위치로 보냅니다. 당사는 이 파일을 받지 않습니다.</p>
+
+<h3>당사가 하지 않는 것</h3>
+<ul>
+  <li>가입이나 로그인이 없으며 이름, 전화번호, 신분증 정보를 수집하지 않습니다.</li>
+  <li>앱 추적 투명성(ATT) 권한을 요청하지 않으며 광고 식별자(IDFA)에 접근하지 않습니다.</li>
+  <li>광고와 맞춤 추천이 없으며 사용자의 정보를 판매하지 않습니다.</li>
+</ul>
+
+<h2 id="ko-permissions">2. 시스템 권한</h2>
+<p>각 권한은 관련 기능을 사용할 때만 요청됩니다. iPhone '설정' &gt; 'CafBeat'에서 언제든지 변경할 수 있으며, 허용하지 않으면 해당 기능만 사용할 수 없습니다.</p>
+<div class="table-scroll">
+<table>
+  <thead><tr><th>권한</th><th>용도</th><th>요청 시점</th></tr></thead>
+  <tbody>
+    <tr><td>카메라</td><td>컵 라벨을 촬영해 기기에서 인식</td><td>'컵 라벨 촬영'을 누를 때</td></tr>
+    <tr><td>사진</td><td>인식할 라벨 사진이나 주문 스크린샷 선택</td><td>'사진에서 선택'을 누를 때</td></tr>
+    <tr><td>위치(앱 사용 중)</td><td>커피를 마신 장소 기록</td><td>위치를 켜거나 처음 장소를 추가할 때</td></tr>
+    <tr><td>알림</td><td>카페인 관련 로컬 알림</td><td>알림을 켤 때</td></tr>
+    <tr><td>iCloud</td><td>기기 간 기록 동기화</td><td>iCloud 동기화를 켤 때</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2 id="ko-sdk">3. 제3자 SDK 및 서비스</h2>
+<div class="table-scroll">
+<table>
+  <thead><tr><th>SDK / 서비스</th><th>제공자</th><th>용도</th><th>수집 정보</th><th>개인정보 처리방침</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Umeng U-App 분석 SDK(UMCommon, UMDevice)<br>중국 본토 전용</td>
+      <td>友盟同欣（北京）科技有限公司</td>
+      <td>브랜드 전송 이벤트를 집계해 인식 개선</td>
+      <td>기기 정보(모델, OS 버전, IDFV, 화면 해상도, 통신사, 네트워크 유형), IP 주소 및 위의 브랜드 전송 항목. 동의 후에만 초기화됩니다.</td>
+      <td><a href="https://www.umeng.com/page/policy" rel="noopener">umeng.com/page/policy</a></td>
+    </tr>
+    <tr>
+      <td>Google Firebase Analytics(광고 식별자 미사용)<br>중국 본토 이외</td>
+      <td>Google LLC</td>
+      <td>브랜드 전송 이벤트를 집계해 인식 개선</td>
+      <td>앱 인스턴스 ID, 기기 모델, OS 버전, 앱 버전, 언어, IP 주소로 추정한 대략적인 국가 또는 지역(IP 주소 자체는 저장되지 않음), 최초 실행 및 사용 시간 같은 기본 이벤트, 그리고 위의 브랜드 전송 항목. IDFA를 수집하지 않으며 광고에 사용하지 않습니다. 동의 후에만 활성화됩니다.</td>
+      <td><a href="https://firebase.google.com/support/privacy" rel="noopener">firebase.google.com/support/privacy</a></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p>앱은 이 밖에도 Apple 시스템 서비스인 Vision(기기 내 텍스트 인식), CloudKit/iCloud(선택적 동기화), Core Location 지오코딩(선택적 장소), StoreKit(앱 내 구입)을 사용합니다. 이 서비스들은 <a href="https://www.apple.com/kr/legal/privacy/" rel="noopener">Apple 개인정보 처리방침</a>에 따라 Apple이 처리합니다.</p>
+
+<h2 id="ko-storage">4. 보관 장소 및 기간</h2>
+<ul>
+  <li><strong>보관 장소:</strong> 기록은 사용자의 기기에, 동기화를 켠 경우 사용자의 iCloud 계정에도 저장됩니다. 중국 본토 이외 사용자의 브랜드 전송 데이터는 Google이 자사 방침에 따라 처리하며, 미국을 포함해 사용자의 국가 또는 지역 밖의 서버에 저장될 수 있습니다. Google은 국외 이전에 표준 계약 조항 등의 장치를 사용합니다. 중국 본토 사용자의 데이터는 Umeng이 중화인민공화국 내에 저장합니다.</li>
+  <li><strong>보관 기간:</strong> 로컬 기록은 사용자가 삭제하거나, '모든 데이터 지우기'를 사용하거나, 앱을 삭제할 때까지 보관됩니다. iCloud 데이터는 iPhone '설정' &gt; [사용자 이름] &gt; 'iCloud' &gt; '계정 저장 공간 관리'에서 삭제할 수 있습니다. 브랜드 전송 데이터는 목적 달성에 필요한 기간만 보관합니다.</li>
+</ul>
+
+<h2 id="ko-share">5. 공유 및 공개</h2>
+<p>제3항의 제3자 SDK를 제외하고, 당사는 사용자의 개인정보를 공유, 이전 또는 공개하지 않습니다. 다만 사용자의 별도 동의가 있거나 법령, 법적 절차 또는 관할 당국의 요구가 있는 경우는 예외입니다.</p>
+
+<h2 id="ko-rights">6. 사용자의 권리</h2>
+<ul>
+  <li><strong>열람·정정·삭제:</strong> 앱에서 모든 기록을 보고 편집하거나 삭제할 수 있으며, '설정'에서 전체를 지울 수도 있습니다.</li>
+  <li><strong>내보내기:</strong> '설정'에서 CSV를, 리포트 화면에서 PDF나 긴 이미지를 내보낼 수 있습니다.</li>
+  <li><strong>동의 철회:</strong> '설정'에서 '인식 개선 돕기'를 언제든지 꺼서 전송을 중단할 수 있으며, 시스템 '설정'에서 카메라, 사진, 위치, 알림 접근을 끌 수 있습니다. 철회 전에 이루어진 처리에는 영향을 주지 않습니다.</li>
+  <li><strong>계정 삭제:</strong> 계정이 없으므로 앱을 삭제하면 로컬 데이터가 모두 삭제됩니다.</li>
+  <li>전송된 브랜드 데이터 삭제 등 기타 요청은 <a href="#ko-contact">문의</a>처로 연락해 주세요. 15영업일 이내에 답변드립니다.</li>
+</ul>
+
+<h2 id="ko-minor">7. 아동</h2>
+<p>앱은 성인을 대상으로 합니다. 14세 미만이라면 부모 또는 보호자와 함께 본 방침을 읽고 앱을 사용하세요. 당사는 아동의 정보를 고의로 수집하지 않습니다.</p>
+
+<h2 id="ko-security">8. 보안</h2>
+<p>기록은 iOS가 보호하는 앱 샌드박스에 저장됩니다. iCloud 데이터는 Apple이 전송 중과 저장 시 모두 암호화하며, 분석 데이터는 암호화된 연결로 전송됩니다. 기기와 Apple ID를 안전하게 관리해 주세요. 개인정보 관련 보안 사고가 발생하면 법령에 따라 알려 드립니다.</p>
+
+<h2 id="ko-update">9. 방침의 변경</h2>
+<p>본 방침은 수시로 업데이트될 수 있으며, 업데이트 시 새 날짜와 함께 이 페이지에 게시합니다. 중요한 변경(새로운 종류의 정보나 새로운 제3자 SDK 추가 등)이 있으면 앱에서 눈에 띄게 알리고 필요한 경우 다시 동의를 받습니다.</p>
+
+<h2 id="ko-contact">10. 문의</h2>
+<ul>
+  <li>개발자: wangrui</li>
+  <li>이메일: <a href="mailto:wrzxnx@gmail.com">wrzxnx@gmail.com</a></li>
+</ul>
+<p>15영업일 이내에 답변드립니다.</p>
+</main>
+<footer>
+  <p><a href="https://wrzxnx.github.io/cafbeat/?lang=ko">CafBeat</a> · <a href="https://wrzxnx.github.io/cafbeat-terms/?lang=ko">이용약관</a> · <a href="https://wrzxnx.github.io/cafbeat-privacy/?lang=ko">개인정보 처리방침</a> · <a href="mailto:wrzxnx@gmail.com">wrzxnx@gmail.com</a></p>
+  <p>© 2026 咖律 CafBeat</p>
+</footer>
+</section>
+<section data-lang="th" lang="th">
+<header class="top">
+  <a class="brand" href="https://wrzxnx.github.io/cafbeat/?lang=th"><img src="assets/icon.png" alt="">CafBeat</a>
+  <nav class="lang" aria-label="Language">
+    <a href="?lang=zh-Hans" hreflang="zh-Hans">简体</a>
+    <a href="?lang=zh-Hant" hreflang="zh-Hant">繁體</a>
+    <a href="?lang=en" hreflang="en">English</a>
+    <a href="?lang=ja" hreflang="ja">日本語</a>
+    <a href="?lang=ko" hreflang="ko">한국어</a>
+    <a href="?lang=th" aria-current="page" hreflang="th">ไทย</a>
+  </nav>
+</header>
+<main class="receipt">
+<h1>นโยบายความเป็นส่วนตัวของ CafBeat</h1>
+<p class="meta">ปรับปรุงล่าสุด: 2026-10-24 · มีผลบังคับใช้: 2026-10-24</p>
+
+<p>CafBeat (咖律 ต่อไปเรียกว่า "แอป") พัฒนาและดำเนินการโดย wangrui (ต่อไปเรียกว่า "เรา") นโยบายนี้อธิบายว่าแอปจัดการข้อมูลใดบ้าง เพื่อวัตถุประสงค์ใด และคุณมีทางเลือกอะไรบ้าง หากฉบับภาษาต่าง ๆ มีเนื้อหาไม่ตรงกัน สำหรับผู้ใช้นอกจีนแผ่นดินใหญ่ให้ยึดฉบับภาษาอังกฤษ และสำหรับผู้ใช้ในจีนแผ่นดินใหญ่ให้ยึดฉบับภาษาจีนตัวย่อ</p>
+
+<div class="summary">
+  <p><strong>สรุปสั้น ๆ:</strong> บันทึกกาแฟ รูปภาพ และตำแหน่งของคุณจะอยู่บนอุปกรณ์ของคุณเท่านั้น (และใน iCloud ของคุณเองหากเปิดการซิงค์) เราไม่มีเซิร์ฟเวอร์และไม่มีระบบบัญชีผู้ใช้ จึงมองไม่เห็นบันทึกใด ๆ ของคุณ</p>
+  <p>สิ่งเดียวที่ส่งถึงเราคือชื่อแบรนด์กาแฟที่คุณส่ง<strong>หลังจากที่คุณยินยอม</strong> และข้อมูลพื้นฐานของอุปกรณ์ที่บริการวิเคราะห์ของเราเก็บรวบรวม (Google Firebase สำหรับนอกจีนแผ่นดินใหญ่ และ Umeng สำหรับจีนแผ่นดินใหญ่) คุณปิดได้ทุกเมื่อในหน้า "การตั้งค่า"</p>
+</div>
+
+<nav class="toc">
+<strong>สารบัญ</strong>
+<ol>
+  <li><a href="#th-collect">ข้อมูลที่เราจัดการและวัตถุประสงค์</a></li>
+  <li><a href="#th-permissions">สิทธิ์ของระบบ</a></li>
+  <li><a href="#th-sdk">SDK และบริการของบุคคลที่สาม</a></li>
+  <li><a href="#th-storage">การจัดเก็บและระยะเวลา</a></li>
+  <li><a href="#th-share">การแบ่งปันและการเปิดเผย</a></li>
+  <li><a href="#th-rights">สิทธิ์ของคุณ</a></li>
+  <li><a href="#th-minor">ผู้เยาว์</a></li>
+  <li><a href="#th-security">ความปลอดภัย</a></li>
+  <li><a href="#th-update">การเปลี่ยนแปลงนโยบาย</a></li>
+  <li><a href="#th-contact">ติดต่อเรา</a></li>
+</ol>
+</nav>
+
+<h2 id="th-collect">1. ข้อมูลที่เราจัดการและวัตถุประสงค์</h2>
+
+<h3>บันทึกกาแฟ (อยู่บนอุปกรณ์ของคุณเท่านั้น)</h3>
+<p>บันทึกที่คุณสร้าง ได้แก่ เวลา แบรนด์ เครื่องดื่ม ขนาด อุณหภูมิ ระดับความหวาน ตัวเลือกเพิ่มเติม ช่องทางการสั่ง หมายเลขรับสินค้า ราคา ค่าประมาณแคลอรีและคาเฟอีน บันทึกย่อ และข้อความต้นฉบับที่จดจำได้ รวมถึงการตั้งค่า เช่น ค่าจ้างรายชั่วโมงหรือเงินเดือน เวลาเลิกงาน เวลาเข้านอน และขีดจำกัดคาเฟอีน จะ<strong>จัดเก็บในฐานข้อมูลบนอุปกรณ์ของคุณเท่านั้น</strong> และใช้แสดงปฏิทิน สถิติ และรายงาน เราไม่สามารถเข้าถึงข้อมูลเหล่านี้ได้</p>
+
+<h3>การจดจำจากกล้องและรูปภาพ (ประมวลผลบนอุปกรณ์)</h3>
+<p>เมื่อคุณถ่ายภาพฉลากแก้วหรือเลือกภาพหน้าจอคำสั่งซื้อ แอปจะใช้เฟรมเวิร์ก Vision ของ Apple เพื่อ<strong>จดจำข้อความบนอุปกรณ์แบบออฟไลน์</strong> รูปภาพและผลการจดจำจะไม่ถูกอัปโหลด รูปภาพที่คุณเลือกเก็บไว้ (เช่น "ต้นขั้วฉลากแก้ว") จะจัดเก็บบนอุปกรณ์ของคุณเท่านั้น</p>
+
+<h3>ตำแหน่ง (ไม่บังคับ)</h3>
+<p>หากคุณอนุญาตให้เข้าถึงตำแหน่ง แอปจะอ่านตำแหน่งปัจจุบันเมื่อคุณสร้างบันทึก เพื่อบันทึกว่าคุณดื่มกาแฟที่ไหน พิกัดและชื่อสถานที่จะจัดเก็บไว้ในบันทึกบนอุปกรณ์ การแปลงพิกัดเป็นชื่อสถานที่ใช้บริการแปลงพิกัดของระบบ Apple ซึ่ง Apple จัดการตามนโยบายความเป็นส่วนตัวของตน การไม่อนุญาตจะไม่กระทบฟีเจอร์อื่น และคุณพิมพ์ชื่อสถานที่เองได้</p>
+
+<h3>การแจ้งเตือน (ไม่บังคับ)</h3>
+<p>หากคุณเปิดการแจ้งเตือนเกี่ยวกับคาเฟอีน แอปจะตั้งการแจ้งเตือนภายในเครื่องบนอุปกรณ์ของคุณ โดยไม่ผ่านเซิร์ฟเวอร์ใด ๆ</p>
+
+<h3>การซิงค์ iCloud (ไม่บังคับ)</h3>
+<p>หากคุณเปิดการซิงค์ iCloud บันทึกของคุณจะถูกจัดเก็บใน<strong>ฐานข้อมูลส่วนตัวของบัญชี iCloud ของคุณเอง</strong>ผ่าน Apple CloudKit เพื่อซิงค์ระหว่างอุปกรณ์ของคุณ Apple เป็นผู้จัดเก็บและปกป้องข้อมูลนี้ตามนโยบายความเป็นส่วนตัวของตน เราไม่สามารถเข้าถึงได้</p>
+
+<h3>ช่วยปรับปรุงการจดจำ (เฉพาะเมื่อคุณยินยอม)</h3>
+<p>เมื่อเปิดแอปครั้งแรก แอปจะถามว่าคุณยินดีส่งชื่อแบรนด์กาแฟที่จดจำได้หรือไม่ SDK การวิเคราะห์จะเริ่มทำงานและเริ่มส่งข้อมูล<strong>หลังจากที่คุณแตะ "ยินยอม" เท่านั้น</strong> หากคุณแตะ "ไม่ล่ะ" หรือปิดในภายหลังที่หน้า "การตั้งค่า" SDK จะไม่เริ่มทำงานหรือจะหยุดทำงาน</p>
+<p>ข้อมูลที่ส่งมี<strong>เพียง</strong>ฟิลด์ต่อไปนี้:</p>
+<ul>
+  <li><code>brand</code>: ข้อความชื่อแบรนด์ที่คุณบันทึก (ข้อความที่มีตัวเลขติดกันตั้งแต่ 5 หลักขึ้นไปจะถูกทิ้ง ยาวสูงสุด 40 ตัวอักษร)</li>
+  <li><code>ocr_matched</code>: ผลการจดจำตรงกับแบรนด์ในตัวแอปหรือไม่</li>
+  <li><code>corrected</code>: คุณแก้ไขแบรนด์ที่จดจำได้หรือไม่</li>
+  <li><code>in_catalog</code>: แบรนด์นั้นอยู่ในแคตตาล็อกในตัวแอปแล้วหรือไม่</li>
+  <li><code>app_version</code>, <code>data_version</code>: เวอร์ชันของแอปและข้อมูลในตัวแอป</li>
+</ul>
+<p>ข้อมูลที่ส่งจะไม่มีรูปภาพ ข้อความอื่นบนฉลากหรือคำสั่งซื้อ ราคา หมายเลขรับสินค้า เวลา หรือตำแหน่ง จะส่งเฉพาะบันทึกใหม่ที่สร้างจากการจดจำด้วยกล้องหรือรูปภาพเท่านั้น การบันทึกด้วยตนเองและการแก้ไขบันทึกเดิมจะไม่ถูกส่ง เราใช้ข้อมูลนี้เพื่อขยายแคตตาล็อกแบรนด์และปรับปรุงความแม่นยำในการจดจำ</p>
+<p>บริการวิเคราะห์ขึ้นอยู่กับประเทศหรือภูมิภาคของบัญชี App Store ของคุณ: <strong>Google Firebase Analytics สำหรับนอกจีนแผ่นดินใหญ่ และ Umeng สำหรับจีนแผ่นดินใหญ่</strong> โดยจะเปิดใช้งานเพียงตัวเดียวเท่านั้น ทั้งสองจะเริ่มทำงานหลังจากที่คุณยินยอมเท่านั้น และเก็บข้อมูลพื้นฐานของอุปกรณ์ ดูรายละเอียดที่ <a href="#th-sdk">SDK ของบุคคลที่สาม</a></p>
+
+<h3>การซื้อ Pro</h3>
+<p>CafBeat Pro (การสมัครสมาชิกรายปีหรือการซื้อแบบตลอดชีพครั้งเดียว) จำหน่ายผ่านการซื้อภายในแอปของ Apple App Store และ Apple เป็นผู้ดำเนินการชำระเงิน เราไม่ได้รับ Apple ID หรือข้อมูลบัตรชำระเงินของคุณ แอปเพียงอ่านข้อมูลธุรกรรมบนอุปกรณ์ผ่าน Apple StoreKit เพื่อตรวจสอบว่า Pro เปิดใช้งานอยู่หรือไม่</p>
+
+<h3>การส่งออกและการแชร์</h3>
+<p>เมื่อคุณส่งออก PDF ภาพยาว หรือ CSV หรือแชร์ภาพใบเสร็จ คุณเป็นผู้ส่งไฟล์เองผ่านหน้าแชร์ของระบบไปยังแอปหรือที่ที่คุณเลือก เราไม่ได้รับไฟล์เหล่านี้</p>
+
+<h3>สิ่งที่เราไม่ทำ</h3>
+<ul>
+  <li>ไม่ต้องสมัครหรือเข้าสู่ระบบ เราไม่เก็บชื่อ หมายเลขโทรศัพท์ หรือข้อมูลบัตรประจำตัวของคุณ</li>
+  <li>เราไม่ขอสิทธิ์ App Tracking Transparency และไม่เข้าถึงตัวระบุโฆษณา (IDFA)</li>
+  <li>ไม่มีโฆษณา ไม่มีการแนะนำแบบเฉพาะบุคคล และเราไม่ขายข้อมูลของคุณ</li>
+</ul>
+
+<h2 id="th-permissions">2. สิทธิ์ของระบบ</h2>
+<p>แอปจะขอสิทธิ์แต่ละรายการเมื่อคุณใช้ฟีเจอร์ที่เกี่ยวข้องเท่านั้น คุณเปลี่ยนได้ทุกเมื่อที่ การตั้งค่าของ iPhone &gt; CafBeat การไม่อนุญาตจะกระทบเฉพาะฟีเจอร์นั้น</p>
+<div class="table-scroll">
+<table>
+  <thead><tr><th>สิทธิ์</th><th>วัตถุประสงค์</th><th>เวลาที่ขอ</th></tr></thead>
+  <tbody>
+    <tr><td>กล้อง</td><td>ถ่ายภาพฉลากแก้วเพื่อจดจำบนอุปกรณ์</td><td>เมื่อแตะ "ถ่ายฉลากแก้ว"</td></tr>
+    <tr><td>รูปภาพ</td><td>เลือกรูปฉลากหรือภาพหน้าจอคำสั่งซื้อเพื่อจดจำ</td><td>เมื่อแตะ "เลือกจากรูปภาพ"</td></tr>
+    <tr><td>ตำแหน่ง (ขณะใช้งาน)</td><td>บันทึกสถานที่ที่คุณดื่มกาแฟ</td><td>เมื่อเปิดตำแหน่งหรือเพิ่มสถานที่ครั้งแรก</td></tr>
+    <tr><td>การแจ้งเตือน</td><td>การแจ้งเตือนเกี่ยวกับคาเฟอีนภายในเครื่อง</td><td>เมื่อเปิดการแจ้งเตือน</td></tr>
+    <tr><td>iCloud</td><td>ซิงค์บันทึกระหว่างอุปกรณ์</td><td>เมื่อเปิดการซิงค์ iCloud</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2 id="th-sdk">3. SDK และบริการของบุคคลที่สาม</h2>
+<div class="table-scroll">
+<table>
+  <thead><tr><th>SDK / บริการ</th><th>ผู้ให้บริการ</th><th>วัตถุประสงค์</th><th>ข้อมูลที่เก็บ</th><th>นโยบายความเป็นส่วนตัว</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Umeng U-App Analytics SDK (UMCommon, UMDevice)<br>เฉพาะจีนแผ่นดินใหญ่</td>
+      <td>友盟同欣（北京）科技有限公司</td>
+      <td>นับเหตุการณ์การส่งแบรนด์เพื่อปรับปรุงการจดจำ</td>
+      <td>ข้อมูลอุปกรณ์ (รุ่น เวอร์ชันระบบปฏิบัติการ IDFV ความละเอียดหน้าจอ ผู้ให้บริการเครือข่าย ประเภทเครือข่าย) ที่อยู่ IP และฟิลด์การส่งแบรนด์ข้างต้น เริ่มทำงานหลังจากที่คุณยินยอมเท่านั้น</td>
+      <td><a href="https://www.umeng.com/page/policy" rel="noopener">umeng.com/page/policy</a></td>
+    </tr>
+    <tr>
+      <td>Google Firebase Analytics (ไม่ใช้ตัวระบุโฆษณา)<br>นอกจีนแผ่นดินใหญ่</td>
+      <td>Google LLC</td>
+      <td>นับเหตุการณ์การส่งแบรนด์เพื่อปรับปรุงการจดจำ</td>
+      <td>รหัสอินสแตนซ์ของแอป รุ่นอุปกรณ์ เวอร์ชันระบบปฏิบัติการ เวอร์ชันแอป ภาษา ประเทศหรือภูมิภาคโดยประมาณที่อนุมานจากที่อยู่ IP (ไม่จัดเก็บที่อยู่ IP) เหตุการณ์พื้นฐาน เช่น การเปิดครั้งแรกและระยะเวลาการใช้งาน และฟิลด์การส่งแบรนด์ข้างต้น ไม่เก็บ IDFA และไม่ใช้เพื่อการโฆษณา เปิดใช้งานหลังจากที่คุณยินยอมเท่านั้น</td>
+      <td><a href="https://firebase.google.com/support/privacy" rel="noopener">firebase.google.com/support/privacy</a></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p>นอกจากนี้ แอปยังใช้บริการระบบของ Apple ได้แก่ Vision (จดจำข้อความบนอุปกรณ์) CloudKit/iCloud (การซิงค์แบบไม่บังคับ) การแปลงพิกัดของ Core Location (สถานที่แบบไม่บังคับ) และ StoreKit (การซื้อภายในแอป) ซึ่ง Apple จัดการตาม<a href="https://www.apple.com/th/legal/privacy/" rel="noopener">นโยบายความเป็นส่วนตัวของ Apple</a></p>
+
+<h2 id="th-storage">4. การจัดเก็บและระยะเวลา</h2>
+<ul>
+  <li><strong>สถานที่จัดเก็บ:</strong> บันทึกของคุณจัดเก็บบนอุปกรณ์ของคุณ และในบัญชี iCloud ของคุณหากเปิดการซิงค์ ข้อมูลการส่งแบรนด์ของผู้ใช้นอกจีนแผ่นดินใหญ่ Google จะประมวลผลตามนโยบายของตน และอาจจัดเก็บบนเซิร์ฟเวอร์นอกประเทศหรือภูมิภาคของคุณ รวมถึงในสหรัฐอเมริกา โดย Google ใช้กลไกต่าง ๆ เช่น ข้อสัญญามาตรฐาน (Standard Contractual Clauses) สำหรับการโอนข้อมูลระหว่างประเทศ ข้อมูลของผู้ใช้ในจีนแผ่นดินใหญ่ Umeng จะจัดเก็บภายในสาธารณรัฐประชาชนจีน</li>
+  <li><strong>ระยะเวลา:</strong> บันทึกบนอุปกรณ์จะเก็บไว้จนกว่าคุณจะลบ ใช้ "ลบข้อมูลทั้งหมด" หรือลบแอป ข้อมูลใน iCloud ลบได้ที่ การตั้งค่าของ iPhone &gt; [ชื่อของคุณ] &gt; iCloud &gt; จัดการพื้นที่จัดเก็บบัญชี ข้อมูลการส่งแบรนด์จะเก็บไว้เท่าที่จำเป็นต่อวัตถุประสงค์เท่านั้น</li>
+</ul>
+
+<h2 id="th-share">5. การแบ่งปันและการเปิดเผย</h2>
+<p>นอกเหนือจาก SDK ของบุคคลที่สามที่ระบุในข้อ 3 เราไม่แบ่งปัน โอน หรือเปิดเผยข้อมูลส่วนบุคคลของคุณต่อสาธารณะ เว้นแต่ได้รับความยินยอมแยกต่างหากจากคุณ หรือเมื่อกฎหมาย กระบวนการทางกฎหมาย หรือหน่วยงานรัฐที่มีอำนาจกำหนด</p>
+
+<h2 id="th-rights">6. สิทธิ์ของคุณ</h2>
+<ul>
+  <li><strong>เข้าถึง แก้ไข และลบ:</strong> ดู แก้ไข หรือลบบันทึกใดก็ได้ในแอป หรือลบทั้งหมดได้จากหน้า "การตั้งค่า"</li>
+  <li><strong>ส่งออก:</strong> ส่งออก CSV จากหน้า "การตั้งค่า" หรือ PDF / ภาพยาวจากหน้ารายงาน</li>
+  <li><strong>ถอนความยินยอม:</strong> ปิด "ช่วยปรับปรุงการจดจำ" ในหน้า "การตั้งค่า" ได้ทุกเมื่อเพื่อหยุดการส่งข้อมูล และปิดการเข้าถึงกล้อง รูปภาพ ตำแหน่ง หรือการแจ้งเตือนในการตั้งค่าระบบ การถอนความยินยอมไม่กระทบการประมวลผลที่เกิดขึ้นก่อนหน้า</li>
+  <li><strong>การลบบัญชี:</strong> ไม่มีบัญชีผู้ใช้ การลบแอปจะลบข้อมูลทั้งหมดบนอุปกรณ์</li>
+  <li>หากต้องการขอลบข้อมูลแบรนด์ที่ส่งไปแล้วหรือมีคำขออื่น โปรด<a href="#th-contact">ติดต่อเรา</a> เราจะตอบกลับภายใน 15 วันทำการ</li>
+</ul>
+
+<h2 id="th-minor">7. ผู้เยาว์</h2>
+<p>แอปนี้มีไว้สำหรับผู้ใหญ่ หากคุณอายุต่ำกว่า 14 ปี โปรดอ่านนโยบายนี้และใช้แอปร่วมกับผู้ปกครอง เราไม่เก็บข้อมูลของเด็กโดยเจตนา</p>
+
+<h2 id="th-security">8. ความปลอดภัย</h2>
+<p>บันทึกของคุณอยู่ในแซนด์บ็อกซ์ของแอปที่ iOS ปกป้อง ข้อมูล iCloud ได้รับการเข้ารหัสโดย Apple ทั้งระหว่างส่งและขณะจัดเก็บ และข้อมูลการวิเคราะห์ส่งผ่านการเชื่อมต่อที่เข้ารหัส โปรดดูแลอุปกรณ์และ Apple ID ของคุณให้ปลอดภัย หากเกิดเหตุการณ์ด้านความปลอดภัยที่เกี่ยวข้องกับข้อมูลส่วนบุคคล เราจะแจ้งให้คุณทราบตามที่กฎหมายกำหนด</p>
+
+<h2 id="th-update">9. การเปลี่ยนแปลงนโยบาย</h2>
+<p>เราอาจปรับปรุงนโยบายนี้เป็นครั้งคราว และจะเผยแพร่ในหน้านี้พร้อมวันที่ใหม่ หากมีการเปลี่ยนแปลงสำคัญ (เช่น ข้อมูลประเภทใหม่หรือ SDK ของบุคคลที่สามรายใหม่) เราจะแจ้งให้ทราบอย่างชัดเจนในแอป และขอความยินยอมอีกครั้งเมื่อจำเป็น</p>
+
+<h2 id="th-contact">10. ติดต่อเรา</h2>
+<ul>
+  <li>ผู้พัฒนา: wangrui</li>
+  <li>อีเมล: <a href="mailto:wrzxnx@gmail.com">wrzxnx@gmail.com</a></li>
+</ul>
+<p>เราจะตอบกลับภายใน 15 วันทำการ</p>
+</main>
+<footer>
+  <p><a href="https://wrzxnx.github.io/cafbeat/?lang=th">CafBeat</a> · <a href="https://wrzxnx.github.io/cafbeat-terms/?lang=th">ข้อกำหนดการใช้งาน</a> · <a href="https://wrzxnx.github.io/cafbeat-privacy/?lang=th">นโยบายความเป็นส่วนตัว</a> · <a href="mailto:wrzxnx@gmail.com">wrzxnx@gmail.com</a></p>
+  <p>© 2026 咖律 CafBeat</p>
+</footer>
+</section>
+</div>
+</body>
+</html>
